@@ -1,0 +1,46 @@
+<div class="container">
+  <img [src]="event?.imageUrl" [alt]="event?.name" class="event-image" />
+
+  <div class="row">
+    <div class="col-md-11" (click)="hanldeThumnailClick()">
+      <a>
+        <h2>{{ event?.name | uppercase }}</h2>
+      </a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Date:</strong> {{ event?.date | date: "shortDate" }}</div>
+      <div><strong>Time:</strong> {{ event?.time }}</div>
+      <div><strong>Price:</strong> {{ event?.price | currency: "USD":"symbol":"1.2-2" }}</div>
+    </div>
+    <div class="col-md-6">
+      <address>
+        <strong>Address:</strong><br />
+        {{ event?.location?.address }}<br />
+        {{ event?.location?.city }}, {{ event?.location?.country }}
+      </address>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3 style="margin: 5px;">Sessions</h3>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-primary" (click)="addSession()">Add Session</button>
+    </div>
+  </div>
+  <hr>
+  <session-list *ngIf="!addMode" [sessions]="event?.sessions"></session-list>
+  <event-session *ngIf="addMode" (cancelAddMode)="cancelAddMode()" (saveNewSession)="saveNewSession($event)">
+  </event-session>
+  <hr>
+  <div class="col-md-11">
+    <button *ngIf="!addMode" [routerLink]="['/events']" class="btn btn-default" style="width: 100px;">Back</button>
+  </div>
+</div>

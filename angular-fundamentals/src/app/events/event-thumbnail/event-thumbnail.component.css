@@ -1,0 +1,15 @@
+.pad-left {
+    margin-left: 10px;
+}
+
+.thumbnail {
+    min-height: 210px;
+}
+
+.blue {
+    color: deepskyblue !important;
+}
+
+.bold {
+    font-weight: bold;
+}

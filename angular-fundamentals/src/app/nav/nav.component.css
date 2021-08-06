@@ -1,0 +1,25 @@
+.nav.navbar-nav {
+    font-size: 15px;
+}
+
+#searchForm {
+    margin-right: 100px;
+}
+
+@media (max-width: 1200px) {
+    #searchForm {
+        display: none;
+    }
+}
+
+.nav.navbar-nav a:hover {
+    background-color: #df691a;
+}
+
+li > a.active{
+    background-color: #df691a;
+}
+
+.btn-default:hover{
+    background-color: #df691a;
+}

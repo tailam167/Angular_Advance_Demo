@@ -1,0 +1,14 @@
+<div>
+    <h1>Upcoming Angular Events</h1>
+    <hr />
+    <!-- <div class="well">
+        My Angulr Demo
+    </div> -->
+    <div class="row">
+        <div *ngFor="let event of events" class="col-md-6">
+            <event-thumbnail (click)="hanldeThumnailClick(event.name)" [event]="event"></event-thumbnail>
+        </div>
+    </div>
+    <!-- <h3>{{thumbnail.outputString}}</h3> -->
+    <!-- <button class="btn btn-primary">Log Foo</button> -->
+</div>

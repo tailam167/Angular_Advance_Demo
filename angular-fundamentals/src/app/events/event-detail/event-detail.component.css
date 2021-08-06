@@ -1,0 +1,23 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.event-image {
+  height: 150px;
+}
+
+.btn-default:hover {
+  background-color: #df691a;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row a {
+  cursor: pointer;
+}
+
+.row button{
+  float: right;
+  text-align: right;
+}
